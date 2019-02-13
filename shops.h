@@ -2,51 +2,47 @@
 
 class Shops {
     public:
-        // Установка имени студента
-        void set_name(std::string student_name)
+        // Установка названия
+        void set_name(std::string shop_name)
         {
-            name = student_name;
+            name = shop_name;
         }
-        // Получение имени студента
+        // Получение названия
         std::string get_name()
         {
             return name;
         }
-        // Установка фамилии студента
-        void set_ownership(std::string student_last_name)
+        // Установка формы собственности
+        void set_ownership(std::string shop_ownership)
         {
-            last_name = student_last_name;
+            ownership = shop_ownership;
         }
-        // Получение фамилии студента
-        std::string get_last_name()
+        // Получение формы собственности
+        std::string get_ownership()
         {
-            return last_name;
+            return ownership;
         }
-        // Установка промежуточных оценок
-        void set_scores(int student_scores[])
+        // Установка промежуточной цены
+        void set_prices(int shop_price[])
         {
-            for (int i = 0; i < 5; ++i) {
-                scores[i] = student_scores[i];
+            for (int i = 0; i < 3; ++i) {
+                price[i] = shop_price[i];
             }
         }
-        // Установка среднего балла
-        void set_average_ball(float ball)
+        // Установка средней цены
+        void set_average_price(float price)
         {
-            average_ball = ball;
+            average_price = price;
         }
-        // Получение среднего балла
-        float get_average_ball()
+        // Получение средней цены
+        float get_average_price()
         {
-            return average_ball;
+            return average_price;
         }
 
     private:
-        // Промежуточные оценки
-        int scores[5];
-        // Средний балл
-        float average_ball; 
-        // Имя
+        int price[3];
+        float average_price;
         std::string name;
-        // Фамилия
-        std::string last_name;
+        std::string ownership;
 };
