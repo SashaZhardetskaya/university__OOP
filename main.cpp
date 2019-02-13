@@ -23,87 +23,90 @@ int main()
     int shop1_sum = 310;
 
     // Сохраняем цену каждой единицы товара в объект класса Shops
-    shop1.set_scores(shop1_prices);
+    shop1.set_prices(shop1_prices);
 
     // Сохраняем среднюю цену товара в объект класса Shops
-    shop1.set_average_ball(shop1_sum / 5.0);
+    shop1.set_average_price(shop1_sum / 5.0);
     // Выводим данные по магазину
-    std::cout << "Average price for single item in " << shop1.get_last_name() << " "
+    std::cout << "Average price for single item in " << shop1.get_ownership() << " "
          << shop1.get_name() << " is "
-         << shop1.get_average_ball() << std::endl;
+         << shop1.get_average_price() << std::endl;
 
 
-
-
+    /***************
+     * second shop
+    ****************/
 
 
     // Создание объекта класса Shops
     Shops shop2;
 
-    // Сохранение имени и фамилии в объект класса Students
-    shop2.set_name("Vasya");
-    shop2.set_ownership("Petechkin");
+    // Сохранение названия магазина в объект класса Shops
+    shop2.set_name("Velyka Kishenya");
+    // Сохранение формы собственности магазина в объект класса Shops
+    shop2.set_ownership("OOO");
 
-    // Оценки
-    int prices[5];
+    // Количество товаров с ценами
+    int shop2_prices[8];
+    // стоимость всех товаров (вся выручка)
+    int shop2_sum = 711;
 
-    // Сохраняем промежуточные оценки в объект класса Student
-    shop2.set_scores(prices);
+    // Сохраняем цену каждой единицы товара в объект класса Shops
+    shop2.set_prices(shop1_prices);
 
-    // Сохраняем средний балл в объект класса Students
-    shop2.set_average_ball(200 / 5.0);
-    // Выводим данные по студенту
-    std::cout << "Average ball for " << shop2.get_name() << " "
-         << shop2.get_last_name() << " is "
-         << shop2.get_average_ball() << std::endl;
-
-
-
-
+    // Сохраняем среднюю цену товара в объект класса Shops
+    shop2.set_average_price(shop2_sum / 8.0);
+    // Выводим данные по магазину
+    std::cout << "Average price for single item in " << shop2.get_ownership() << " "
+         << shop2.get_name() << " is "
+         << shop2.get_average_price() << std::endl;
 
 
-    // Создание объекта класса Student
-    Shops student;
+
+    /***************
+     * third shop
+    ****************/
+
+    // Создание объекта класса Shops
+    Shops shop3;
 
     std::string name;
-    std::string last_name;
+    std::string ownership;
 
-    // Ввод имени с клавиатуры
+    // Ввод названия с клавиатуры
     std::cout << "Name: ";
     getline(std::cin, name);
 
-    // Ввод фамилии
-    std::cout << "Last name: ";
-    getline(std::cin, last_name);
+    // Ввод формы собственности
+    std::cout << "Ownership: ";
+    getline(std::cin, ownership);
 
-    // Сохранение имени и фамилии в объект класса Students
-    student.set_name("vasya");
-    student.set_ownership("last_name");
+    // Сохранение названия магазина в объект класса Shops
+    shop3.set_name(name);
+    // Сохранение формы собственности магазина в объект класса Shops
+    shop3.set_ownership(ownership);
 
-    // Оценки
-    int scores[5];
-    // Сумма всех оценок
-    int sum = 0;
+    // Количество товаров с ценами
+    int shop3_prices[3];
+    // стоимость всех товаров (вся выручка)
+    int shop3_sum = 0;
 
-    // Ввод промежуточных оценок
-    for (int i = 0; i < 5; ++i) {
-        std::cout << "Score " << i+1 << ": ";
-        std::cin >> scores[i];
+    // Ввод промежуточных цен
+    for (int i = 0; i < 3; ++i) {
+        std::cout << "Price " << i+1 << ": ";
+        std::cin >> shop3_prices[i];
         // суммирование
-        sum += scores[i];
+        shop3_sum += shop3_prices[i];
     }
+    // Сохраняем цену каждой единицы товара в объект класса Shops
+    shop3.set_prices(shop3_prices);
 
-    // Сохраняем промежуточные оценки в объект класса Student
-    student.set_scores(scores);
-    // Считаем средний балл
-    float average_ball = sum / 5.0;
-    // Сохраняем средний балл в объект класса Students
-    student.set_average_ball(average_ball);
-    // Выводим данные по студенту
-    std::cout << "Average ball for " << student.get_name() << " "
-         << student.get_last_name() << " is "
-         << student.get_average_ball() << std::endl;
-
+    // Сохраняем среднюю цену товара в объект класса Shops
+    shop3.set_average_price(shop3_sum / 3.0);
+    // Выводим данные по магазину
+    std::cout << "Average price for single item in " << shop2.get_ownership() << " "
+         << shop2.get_name() << " is "
+         << shop2.get_average_price() << std::endl;
 
 
 
