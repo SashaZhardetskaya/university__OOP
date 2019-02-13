@@ -109,7 +109,5 @@ int main()
          << shop2.get_average_price() << std::endl;
 
 
-
-
     return 0;
 }
