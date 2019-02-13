@@ -13,7 +13,7 @@ class Shops {
             return name;
         }
         // Установка фамилии студента
-        void set_last_name(std::string student_last_name)
+        void set_ownership(std::string student_last_name)
         {
             last_name = student_last_name;
         }
